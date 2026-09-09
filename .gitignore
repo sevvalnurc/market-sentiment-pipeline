@@ -1,0 +1,33 @@
+# --- Ortam değişkenleri / gizli bilgiler ---
+.env
+*.env
+.env.*
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Sanal ortam ---
+venv/
+env/
+.venv/
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints/
+
+# --- IDE / editör ---
+.vscode/
+.idea/
+
+# --- İşletim sistemi ---
+.DS_Store
+Thumbs.db
+
+# --- Loglar ---
+*.log

@@ -1,0 +1,9 @@
+yfinance
+pandas
+numpy
+vaderSentiment
+psycopg2-binary
+feedparser
+schedule
+python-dotenv
+sqlalchemy

@@ -26,9 +26,9 @@ Bu soru iki ayrı istatistiksel test ile operasyonelleştirilmiştir:
 ## 🏗️ Mimari
 ```
 Reddit RSS ─┐
-             ├─→ VADER Sentiment Analizi ─→ PostgreSQL (Render) ─→ Jupyter Notebook (Analiz)
-Haber RSS ──┘                                      ↑
-                                                     │
+            ├─→ VADER Sentiment Analizi ─→ PostgreSQL (Render) ─→ Jupyter Notebook (Analiz)
+Haber RSS ──┘                                       ↑
+                                                    │
 yfinance (BTC/ETH fiyatları) ───────────────────────┘
 
 GitHub Actions (her 15 dakikada bir tetikleme) → Pipeline'ı bulutta otomatik çalıştırır

@@ -24,14 +24,15 @@ Bu soru iki ayrı istatistiksel test ile operasyonelleştirilmiştir:
 - Anlamlılık düzeyi: α = 0.05
 
 ## 🏗️ Mimari
+```
 Reddit RSS ─┐
-├─→ VADER Sentiment Analizi ─→ PostgreSQL (Render) ─→ Jupyter Notebook (Analiz)
-Haber RSS ──┘ ↑
-│
+             ├─→ VADER Sentiment Analizi ─→ PostgreSQL (Render) ─→ Jupyter Notebook (Analiz)
+Haber RSS ──┘                                      ↑
+                                                     │
 yfinance (BTC/ETH fiyatları) ───────────────────────┘
 
 GitHub Actions (her 15 dakikada bir tetikleme) → Pipeline'ı bulutta otomatik çalıştırır
-
+```
 **Veri akışı:**
 1. Reddit (`r/CryptoCurrency`) ve finans haber siteleri (CoinDesk, CoinTelegraph, CryptoSlate) 
    RSS akışlarından başlıklar çekilir.
@@ -55,22 +56,24 @@ GitHub Actions (her 15 dakikada bir tetikleme) → Pipeline'ı bulutta otomatik 
 - **Jupyter Notebook** — analiz ortamı
 
 ## 📁 Proje Yapısı
+```
 ├── src/
-│ ├── fetch_reddit.py # Reddit RSS'ten veri çeker
-│ ├── fetch_news_rss.py # Haber sitelerinden veri çeker
-│ ├── fetch_data.py # Fiyat verisi çeker (yfinance)
-│ ├── sentiment.py # VADER ile duygu analizi
-│ ├── db_manager.py # PostgreSQL bağlantı/kayıt işlemleri
-│ ├── main.py # Yerel/sürekli çalışan pipeline (geliştirme amaçlı)
-│ ├── run_once.py # GitHub Actions için tek seferlik çalışan versiyon
-│ └── test_db.py # Veritabanı bağlantı testi (sadece geliştirme amaçlı)
+│   ├── fetch_reddit.py      # Reddit RSS'ten veri çeker
+│   ├── fetch_news_rss.py    # Haber sitelerinden veri çeker
+│   ├── fetch_data.py        # Fiyat verisi çeker (yfinance)
+│   ├── sentiment.py         # VADER ile duygu analizi
+│   ├── db_manager.py        # PostgreSQL bağlantı/kayıt işlemleri
+│   ├── main.py               # Yerel/sürekli çalışan pipeline (geliştirme amaçlı)
+│   ├── run_once.py           # GitHub Actions için tek seferlik çalışan versiyon
+│   └── test_db.py            # Veritabanı bağlantı testi (sadece geliştirme amaçlı)
 ├── notebooks/
-│ ├── eda.ipynb # Veri temizleme, analiz ve hipotez testi
-│ └── sentiment_price_timeline.png # Analiz sonucu üretilen görsel
+│   ├── eda.ipynb                       # Veri temizleme, analiz ve hipotez testi
+│   └── sentiment_price_timeline.png    # Analiz sonucu üretilen görsel
 ├── .github/workflows/
-│ └── pipeline.yml # Otomatik veri toplama (her 15 dakikada bir)
+│   └── pipeline.yml           # Otomatik veri toplama (her 15 dakikada bir)
 ├── requirements.txt
 └── README.md
+```
 
 ## 🧹 Veri Hazırlama
 

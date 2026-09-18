@@ -63,9 +63,9 @@ GitHub Actions (her 15 dakikada bir tetikleme) → Pipeline'ı bulutta otomatik 
 │   ├── fetch_data.py        # Fiyat verisi çeker (yfinance)
 │   ├── sentiment.py         # VADER ile duygu analizi
 │   ├── db_manager.py        # PostgreSQL bağlantı/kayıt işlemleri
-│   ├── main.py               # Yerel/sürekli çalışan pipeline (geliştirme amaçlı)
-│   ├── run_once.py           # GitHub Actions için tek seferlik çalışan versiyon
-│   └── test_db.py            # Veritabanı bağlantı testi (sadece geliştirme amaçlı)
+│   ├── main.py              # Yerel/sürekli çalışan pipeline (geliştirme amaçlı)
+│   ├── run_once.py          # GitHub Actions için tek seferlik çalışan versiyon
+│   └── check_db_connection.py     # Veritabanı bağlantı testi (sadece geliştirme amaçlı)
 ├── notebooks/
 │   ├── eda.ipynb                       # Veri temizleme, analiz ve hipotez testi
 │   └── sentiment_price_timeline.png    # Analiz sonucu üretilen görsel
